@@ -1,0 +1,54 @@
+<div class="header">
+
+  <div>
+    Раздел: {{ currentCategory.name }}
+  </div>
+
+  <div>
+    Выбрано пунктов: {{ totalCount }}
+    |
+    Общее значение: {{ totalValue }}
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="sidebar">
+
+    <div
+      *ngFor="let category of categories"
+      (click)="selectCategory(category)"
+      [class.active]="category === currentCategory"
+      class="category"
+    >
+      {{ category.name }}
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <div *ngFor="let item of currentCategory.items">
+
+      <label>
+
+        <input
+          type="checkbox"
+          [checked]="item.checked"
+          (change)="toggleItem(item)"
+        />
+
+        {{ item.name }}
+
+        <div class="value">
+          Value: {{ item.value }}
+        </div>
+
+      </label>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+.header{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  border-bottom:1px solid #ccc;
+  font-weight:500;
+}
+
+.container{
+  display:flex;
+  height:400px;
+}
+
+.sidebar{
+  width:200px;
+  border-right:1px solid #ccc;
+  padding:10px;
+}
+
+.category{
+  padding:6px;
+  cursor:pointer;
+}
+
+.category:hover{
+  background:#eee;
+}
+
+.active{
+  font-weight:bold;
+}
+
+.content{
+  flex:1;
+  padding:20px;
+}
+
+.value{
+  font-size:12px;
+  color:gray;
+}
